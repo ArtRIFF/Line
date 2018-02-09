@@ -1,0 +1,17 @@
+
+public class Line {
+	private final Point start;
+	private final Point end;
+
+	public Line(Point start, Point end) {
+		this.start = start;
+		this.end = end;
+	}
+
+	public double getLength() {
+		double dpointX = end.getX() - start.getX();
+		double dpointY = end.getY() - end.getY();
+		double length = Math.sqrt(dpointX * dpointX + dpointY * dpointY);
+		return length;
+	}
+}
