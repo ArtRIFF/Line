@@ -1,0 +1,27 @@
+
+public class LineRunner {
+	public static void main(String[] args) {
+		Point PointOne = new Point(1, 3);
+		Point PointTwo = new Point(5, -1);
+		Point PointThree = new Point(5, 9);
+		Point PointFour = new Point(2, 7);
+
+		Line LineOne = new Line(PointOne, PointTwo);
+		Line LineTwo = new Line(PointThree, PointFour);
+		Line LineThree = new Line(new Point(2, -13), new Point(3, -1));
+		Line LineFour = new Line(new Point(12, -1), new Point(4, 22));
+
+		Lines Lines = new Lines();
+		Lines.add(LineOne);
+		Lines.add(LineTwo);
+		Lines.add(LineThree);
+		Lines.add(LineFour);
+
+		System.out.println(LineOne.getLength());
+		System.out.println(LineTwo.getLength());
+		System.out.println(LineThree.getLength());
+		System.out.println(LineFour.getLength());
+		System.out.println("Сума всіх довжин  ліній " + Lines.sumLength());
+		System.out.println("Найбільша довжина " + Lines.longestLine().getLength());
+	}
+}
